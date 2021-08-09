@@ -1,0 +1,283 @@
+* {
+  list-style: none;
+}
+
+$color-primario: #ffff;
+$color-segundario: #2fc01c;
+$font-size-primario: 1.3rem;
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(#505050, #161616);
+}
+
+section {
+  padding: 101px 0;
+}
+
+.enlace .enlace__menu {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 80px;
+}
+
+p {
+  font-size: $font-size-primario;
+  color: #ffff;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.topmargin-xs {
+  margin-top: 15px;
+}
+
+.topmargin-sm {
+  margin-top: 30px;
+}
+
+.topmargin-lg {
+  margin-top: 60px;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 15px 26px;
+  min-width: 160px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.btn-light {
+  background-color: #ffff;
+  color: #e61010;
+  border: 2px #ffff;
+}
+
+.btn i {
+  font-size: 5rem;
+  margin-left: 5px;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px 0 rgba(209, 199, 199, 0.05);
+  min-height: 100px;
+}
+
+.nav-link {
+  color: #ffff;
+
+  &:hover {
+    color: rgb(17, 15, 19);
+  }
+}
+
+.logo-brand {
+  min-width: 160px;
+  max-width: 180px;
+}
+
+.navbar-toggler {
+  font-size: 40px;
+}
+
+.navbar-toogler:focus {
+  outline: none;
+}
+
+#hero {
+  background-image: url(imagen/eudo.jpg);
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 700px;
+  color: rgb(8, 5, 5);
+
+  p {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.content-center {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+/*******Nosotros********/
+#nosotros {
+  background-image: url(imagen/dolar.jpg);
+  min-height: 700px;
+}
+
+#nosotros h1 {
+  font-size: 3rem;
+  color: rgb(176, 159, 216);
+}
+
+#nosotros p {
+  margin-top: 2vh;
+}
+
+#nosotros .viejas {
+  margin-top: 5vh;
+}
+
+/*******Servicios********/
+
+#servicios {
+  color: rgb(31, 173, 230);
+}
+
+.monedas h1 {
+  font-size: 2.5rem;
+}
+
+.monedas {
+  h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .monedas__lista {
+    font-size: $font-size-primario;
+    font-weight: 500;
+    color: $color-primario;
+  }
+
+  .monedas__banderas {
+    margin-top: 0.5vh;
+    max-width: 8vh;
+  }
+}
+
+.lista .lista__servicios {
+  margin-top: 7vh;
+  color: $color-primario;
+  text-align: center;
+
+  span {
+    font-size: 3rem;
+  }
+}
+
+.servicios {
+  background-color: #2c2b2b;
+}
+
+/*******Testimonios********/
+
+#Testimonios {
+  background-image: url(imagen/cliente7.jpg);
+  background-size: cover;
+}
+
+.testi {
+  color: rgb(176, 159, 216);
+}
+
+.testi h1 {
+  font-size: 2.5rem;
+}
+
+.carousel {
+  min-height: 240px;
+  padding: 40px;
+  border-radius: 2px;
+  text-align: center;
+
+  p {
+    font-size: 2rem;
+    font-weight: 350;
+    color: $color-primario;
+  }
+}
+
+.estrellas span {
+  color: #ffb944;
+  font-size: 2rem;
+}
+
+.testimonios-usuario {
+  max-width: 100px;
+  margin: 0 auto;
+  text-align: left;
+
+  h6 {
+    margin-bottom: 0px;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+
+  img {
+    border-radius: 15%;
+    max-width: 100px;
+    text-align: center;
+  }
+}
+/*******Contacto********/
+.contacto h1 {
+  font-size: 3rem;
+  color: rgb(31, 173, 230);
+}
+
+.numer p {
+  color: rgba(120, 143, 158, 0.993);
+  margin-top: 5vh;
+}
+/*******footer********/
+
+.footer {
+  .footer__redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #161616;
+
+    a {
+      color: #ffff;
+      padding: 20px 0;
+      font-size: 2rem;
+      border-radius: 3px;
+      margin: 0 50px;
+      text-align: center;
+    }
+  }
+
+  .footer__autor {
+    display: block;
+    padding: 1px 1px 1px 1px;
+    font-size: 1.8vh;
+    margin: 0;
+    color: $color-primario;
+    text-align: center;
+  }
+}
+
+/*--------operaciones--------*/
+
+$redes: (
+  face: #3b5998,
+  whap: #075e54,
+  twi: #00acee,
+  ig: #8a3ab9,
+);
+@each $red, $color in $redes {
+  .footer__redes {
+    .footer__redes--#{$red}:hover {
+      color: $color;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 40px;
+    line-height: normal;
+  }
+}
